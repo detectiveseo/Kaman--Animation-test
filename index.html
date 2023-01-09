@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Larnign</title>
+    <style>
+
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .kaman{
+            display: flex;
+        }
+        .kaman-1st-part{
+            width: 20px;
+            height: 20px;
+            background-image: linear-gradient(gray, black);
+            border-radius: 25px;
+            position: relative;
+            top: 25px;
+            left: 50px;
+        }
+        .kaman-2nd-part{
+            width: 10px;
+            height: 60px;
+            background-image: linear-gradient(black, gray);
+            border-radius: 25px;
+            position: relative;
+            top: 67px;
+            left: 11px;
+            transform: rotate(-20deg);
+        }
+        .kaman-3rd-part{
+            width: 10px;
+            height: 70px;
+            background-image: linear-gradient(black, gray);
+            border-radius: 25px;
+            position: relative;
+            top: 57px;
+            left: 10px;
+            transform: rotate(-20deg);
+        }
+        .kaman-body{
+            width: 300px;
+            height: 80px;
+            background-image: linear-gradient(gray, black);
+            border-radius: 10px 0px 0px 10px;
+            transform: rotate(-20deg);
+            text-align: center;
+            font-size: 25px;
+            color: rgba(0, 0, 0, 0.411);
+            text-transform: uppercase;
+            font-weight: bold;
+            z-index: 100;
+        }
+        .kaman-ring{
+            width: 10px;
+            height: 90px;
+            background-image: linear-gradient(black, gray);
+            border-radius: 20px;
+            position: relative;
+            top: -57px;
+            left: -10px;
+            z-index: 103;
+            transform: rotate(-20deg);
+        }
+        /*stand of kaman*/
+        .stand-one{
+            width: 75px;
+            height: 75px;
+            border: 25px solid rgb(0, 0, 0);
+            border-radius: 50%;
+            position: relative;
+            right: 300px;
+            top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 101;
+        }
+        .stand-two{
+            width: 70px;
+            height: 70px;
+            border: 20px solid rgba(0, 0, 0, 0.808);
+            border-radius: 50%;
+            position: relative;
+            right: 300px;
+            top: -80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+        }
+        .ring-ball{
+            width: 20px;
+            height: 20px;
+            background-image: linear-gradient(gray, black);
+            border-radius: 50%;
+        }
+        
+        
+        
+        @keyframes gola{
+            0%{
+                left: 100px;
+            }
+            100%{
+                top: -750px;
+                left: 2000px;
+            }
+        }
+        .kaman-gola{
+            width: 50px;
+            height: 50px;
+            background-image: linear-gradient(red, brown);
+            border-radius: 50%;
+            border: 10px solid brown;
+            position: relative;
+            left: 100px;
+            top: -282px;
+            animation-name: gola;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
+            animation-play-state: running;
+            animation-fill-mode: forwards;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="kaman">
+        <div class="kaman-1st-part"></div>
+        <div class="kaman-2nd-part"></div>
+        <div class="kaman-3rd-part"></div>
+        <div class="kaman-body"><p>Danger</p></div>
+        <div class="kaman-ring"></div>
+        <div class="kaman-stand">
+            <div class="stand-one"><div class="ring-ball"></div></div>
+            <div class="stand-two"><div class="ring-ball"></div></div>
+        </div>
+    </div>
+    <div class="kaman-gola"></div>
+</body>
+</html>
